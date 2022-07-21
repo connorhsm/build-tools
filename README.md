@@ -1,8 +1,9 @@
-# 2HOL
-This is an archive of build tools and documentation made by Chard for Community Crucible in the earlier days of the OneLife eco system.
-I made some efforts to conver these to 2HOL, but never completed it and have since moved onto using and making other tools.
+# build-tools
 
-~~Processes and scripts to manage 2HOL~~
+## History
+This repository originated from [Chard Bury](https://github.com/chardbury), originally created to house proccesses and scripts to manage the Community Crucible fork of OneLife, this is intended to be our moditication of those tools. An archive of the repository, close to the state Chard had left it in before Community Crucible was deleted, can be found at https://github.com/twohoursonelife/archive-build-tools.
 
-~~This repo is in need of migrating to operate with the current infrastructure of 2HOL.
-We'll be updating our processes modeled on the contents of this repo to improve our workflow.~~
+## Current
+At this time, I am working through these scripts again with the goal of modularising them more and converting them to work with our setup.
+
+All components of this repository are unstable and should not be relied upon at this time.
