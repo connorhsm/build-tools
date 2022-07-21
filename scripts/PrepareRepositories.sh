@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e;
 
@@ -8,7 +8,6 @@ source ./scripts/CommonVariables.sh;
 
 
 
-GITHUB_USER="${1}";
 GITHUB_BASE="https://github.com/twohoursonelife";
 
 if [[ ! -d repos/2HOL-code ]]; then

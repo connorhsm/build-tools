@@ -1,10 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e;
 
 cd "$(dirname "${0}")/..";
 
 source ./scripts/CommonVariables.sh;
+
+./scripts/PrepareRepositories.sh;
 
 ./scripts/EnsureClean.sh;
 
@@ -239,7 +241,6 @@ if is_flag_on "windows"; then
         sed -i -r '/^PLATFORM_COMPILE_FLAGS =/aPLATFORM_COMPILE_FLAGS += ${CUSTOM_MINGW_COMPILE_FLAGS}' Makefile;
         if is_flag_on "client"; then
             make;
-            cp Crucible Crucible.exe;
         fi;
         if is_flag_on "editor"; then
             export CUSTOM_MINGW_COMPILE_FLAGS="${CUSTOM_MINGW_COMPILE_FLAGS} ${CUSTOM_MINGW_EDITOR_COMPILE_FLAGS}"
