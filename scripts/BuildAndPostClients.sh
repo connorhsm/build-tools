@@ -274,16 +274,16 @@ if is_flag_on "windows"; then
         cp dependencies/zlib-1.2.11/zlib1.dll output/editorFiles;
         cp dependencies/libpng-1.6.37/.libs/libpng16-16.dll output/editorFiles;
         cp dependencies/SDL-1.2.15/bin/SDL.dll output/editorFiles;
-        cp -R repos/crucible-code/gameSource/graphics output/editorFiles;
-        cp -R repos/crucible-code/gameSource/languages output/editorFiles;
-        cp -R repos/crucible-code/gameSource/settings output/editorFiles;
-        cp repos/crucible-code/gameSource/EditCrucible.exe output/editorFiles;
+        cp -R repos/OneLife/gameSource/graphics output/editorFiles;
+        cp -R repos/OneLife/gameSource/languages output/editorFiles;
+        cp -R repos/OneLife/gameSource/settings output/editorFiles;
+        cp repos/OneLife/gameSource/Edit2HOL.exe output/editorFiles;
         cd output/editorFiles;
         echo 0 > settings/fullscreen.ini;
-        if [[ -f "../editorBuilds/EditCrucible_v${CURRENT_VERSION}_Windows.zip" ]]; then
-            rm "../editorBuilds/EditCrucible_v${CURRENT_VERSION}_Windows.zip";
+        if [[ -f "../editorBuilds/Edit2HOL_v${CURRENT_VERSION}_Windows.zip" ]]; then
+            rm "../editorBuilds/Edit2HOL_v${CURRENT_VERSION}_Windows.zip";
         fi;
-        zip -r "../editorBuilds/EditCrucible_v${CURRENT_VERSION}_Windows.zip" *;
+        zip -r "../editorBuilds/Edit2HOL_v${CURRENT_VERSION}_Windows.zip" *;
         cd ..;
         rm -r editorFiles;
         cd ../repos;
