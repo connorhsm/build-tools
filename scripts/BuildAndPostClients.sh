@@ -6,7 +6,6 @@ cd "$(dirname "${0}")/..";
 
 source ./scripts/CommonVariables.sh;
 
-./scripts/PrepareRepositories.sh;
 
 ./scripts/EnsureClean.sh;
 
