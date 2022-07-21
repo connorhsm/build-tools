@@ -269,8 +269,8 @@ if is_flag_on "windows"; then
     if is_flag_on "editor"; then
         cd ..;
         mkdir output/editorFiles;
-        cp /usr/lib/gcc/i686-w64-mingw32/6.3-win32/libgcc_s_sjlj-1.dll output/editorFiles;
-        cp dependencies/zlib-1.2.11/zlib1.dll output/editorFiles;
+        cp /usr/lib/gcc/i686-w64-mingw32/9.3-win32/libgcc_s_sjlj-1.dll output/editorFiles;
+        cp dependencies/zlib-1.2.12/zlib1.dll output/editorFiles;
         cp dependencies/libpng-1.6.37/.libs/libpng16-16.dll output/editorFiles;
         cp dependencies/SDL-1.2.15/bin/SDL.dll output/editorFiles;
         cp -R repos/OneLife/gameSource/graphics output/editorFiles;
