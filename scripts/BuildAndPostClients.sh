@@ -156,10 +156,10 @@ if is_flag_on "windows"; then
 
     if is_flag_on "editor"; then
         cd ..;
-        if [[ ! -d windows_deps ]]; then
-            mkdir windows_deps;
+        if [[ ! -d dependencies ]]; then
+            mkdir dependencies;
         fi;
-        cd windows_deps;
+        cd dependencies;
         if [[ ! -f zlib-1.2.12.tar.gz ]]; then
             wget https://www.zlib.net/zlib-1.2.12.tar.gz;
         fi;
@@ -183,10 +183,10 @@ if is_flag_on "windows"; then
 
     if is_flag_on "editor"; then
         cd ..;
-        if [[ ! -d windows_deps ]]; then
-            mkdir windows_deps;
+        if [[ ! -d dependencies ]]; then
+            mkdir dependencies;
         fi;
-        cd windows_deps;
+        cd dependencies;
         if [[ ! -f libpng-1.6.37.tar.gz ]]; then
             wget https://downloads.sourceforge.net/project/libpng/libpng16/1.6.37/libpng-1.6.37.tar.gz;
         fi;
@@ -209,10 +209,10 @@ if is_flag_on "windows"; then
 
     if is_flag_on "client" || is_flag_on "editor"; then
         cd ..;
-        if [[ ! -d windows_deps ]]; then
-            mkdir windows_deps;
+        if [[ ! -d dependencies ]]; then
+            mkdir dependencies;
         fi;
-        cd windows_deps;
+        cd dependencies;
         if [[ ! -f SDL-devel-1.2.15-mingw32.tar.gz ]]; then
             wget https://www.libsdl.org/release/SDL-devel-1.2.15-mingw32.tar.gz;
         fi;
@@ -271,9 +271,9 @@ if is_flag_on "windows"; then
         cd ..;
         mkdir output/editorFiles;
         cp /usr/lib/gcc/i686-w64-mingw32/6.3-win32/libgcc_s_sjlj-1.dll output/editorFiles;
-        cp windows_deps/zlib-1.2.11/zlib1.dll output/editorFiles;
-        cp windows_deps/libpng-1.6.37/.libs/libpng16-16.dll output/editorFiles;
-        cp windows_deps/SDL-1.2.15/bin/SDL.dll output/editorFiles;
+        cp dependencies/zlib-1.2.11/zlib1.dll output/editorFiles;
+        cp dependencies/libpng-1.6.37/.libs/libpng16-16.dll output/editorFiles;
+        cp dependencies/SDL-1.2.15/bin/SDL.dll output/editorFiles;
         cp -R repos/crucible-code/gameSource/graphics output/editorFiles;
         cp -R repos/crucible-code/gameSource/languages output/editorFiles;
         cp -R repos/crucible-code/gameSource/settings output/editorFiles;
