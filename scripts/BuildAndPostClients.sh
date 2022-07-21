@@ -160,15 +160,15 @@ if is_flag_on "windows"; then
             mkdir windows_deps;
         fi;
         cd windows_deps;
-        if [[ ! -f zlib-1.2.11.tar.gz ]]; then
-            wget https://www.zlib.net/zlib-1.2.11.tar.gz;
+        if [[ ! -f zlib-1.2.12.tar.gz ]]; then
+            wget https://www.zlib.net/zlib-1.2.12.tar.gz;
         fi;
-        [[ "$(sha256sum -b zlib-1.2.11.tar.gz | cut "-d " -f1)" = \
-        "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1" ]];
-        if [[ ! -d zlib-1.2.11 ]]; then
-            tar -xzf zlib-1.2.11.tar.gz;
+        [[ "$(sha256sum -b zlib-1.2.12.tar.gz | cut "-d " -f1)" = \
+        "91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9" ]];
+        if [[ ! -d zlib-1.2.12 ]]; then
+            tar -xzf zlib-1.2.12.tar.gz;
         fi;
-        cd zlib-1.2.11;
+        cd zlib-1.2.12;
         _OLD_PATH="${PATH}"; export PATH="/usr/i686-w64-mingw32/bin:${PATH}";
         ./configure --static;
         make;
