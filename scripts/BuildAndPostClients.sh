@@ -246,7 +246,6 @@ if is_flag_on "windows"; then
             export CUSTOM_MINGW_LINK_FLAGS="${CUSTOM_MINGW_LINK_FLAGS} ${CUSTOM_MINGW_EDITOR_LINK_FLAGS}"
             sed -i -r '/^PLATFORM_LIBPNG_FLAG =/aPLATFORM_LIBPNG_FLAG = -lz -lpng16' Makefile;
             ./makeEditor.sh;
-            cp EditCrucible EditCrucible.exe;
         fi;
         mv Makefile.bak Makefile;
         export PATH="${_OLD_PATH}"; unset _OLD_PATH;
