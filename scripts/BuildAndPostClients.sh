@@ -84,6 +84,7 @@ if is_flag_on "linux"; then
         for REPO in ${REPO_CODE} ${REPO_DATA} ${REPO_GEMS}; do
             git -C "${REPO}" checkout "${CURRENT_VERSION_REF}";
         done;
+        git -C OneLife checkout update-build-tools;
         cd OneLife;
         ./configure 1;
         cd gameSource;
@@ -232,6 +233,7 @@ if is_flag_on "windows"; then
         for REPO in ${REPO_CODE} ${REPO_DATA} ${REPO_GEMS}; do
             git -C "${REPO}" checkout "${CURRENT_VERSION_REF}";
         done;
+        git -C OneLife checkout update-build-tools;
         cd OneLife;
         ./configure 3;
         cd gameSource;
