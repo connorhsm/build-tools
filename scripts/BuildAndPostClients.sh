@@ -91,7 +91,11 @@ if is_flag_on "linux"; then
         make;
         cd ../build/source;
         ./makeLinuxBuild "v${CURRENT_VERSION}";
-        cp "${TAG_BASE}${CURRENT_VERSION}_Linux.tar.gz" ../../../../output/clientBuilds;
+        if is_flag_on "unsigned"; then
+            cp "${TAG_BASE}${CURRENT_VERSION}_Linux_Unsigned.tar.gz" ../../../../output/clientBuilds;
+        else;
+            cp "${TAG_BASE}${CURRENT_VERSION}_Linux.tar.gz" ../../../../output/clientBuilds;
+        fi;
         cd ../../..;
     fi;
 
@@ -260,8 +264,13 @@ if is_flag_on "windows"; then
         cd OneLife/build;
         ./makeDistributionWindows "v${CURRENT_VERSION}";
         cd windows;
-        zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" "${TAG_BASE}${CURRENT_VERSION}";
-        cp "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" ../../../../output/clientBuilds;
+        if is_flag_on "unsigned"; then
+            zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows_Unsigned.zip" "${TAG_BASE}${CURRENT_VERSION}";
+            cp "${TAG_BASE}${CURRENT_VERSION}_Windows_Unsigned.zip" ../../../../output/clientBuilds;
+        else;
+            zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" "${TAG_BASE}${CURRENT_VERSION}";
+            cp "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" ../../../../output/clientBuilds;
+        fi;        
         cd ../../..;
     fi;
 
