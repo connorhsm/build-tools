@@ -93,7 +93,7 @@ if is_flag_on "linux"; then
         ./makeLinuxBuild "v${CURRENT_VERSION}";
         if is_flag_on "unsigned"; then
             cp "${TAG_BASE}${CURRENT_VERSION}_Linux_Unsigned.tar.gz" ../../../../output/clientBuilds;
-        else;
+        else
             cp "${TAG_BASE}${CURRENT_VERSION}_Linux.tar.gz" ../../../../output/clientBuilds;
         fi;
         cd ../../..;
@@ -267,7 +267,7 @@ if is_flag_on "windows"; then
         if is_flag_on "unsigned"; then
             zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows_Unsigned.zip" "${TAG_BASE}${CURRENT_VERSION}";
             cp "${TAG_BASE}${CURRENT_VERSION}_Windows_Unsigned.zip" ../../../../output/clientBuilds;
-        else;
+        else
             zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" "${TAG_BASE}${CURRENT_VERSION}";
             cp "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" ../../../../output/clientBuilds;
         fi;        
