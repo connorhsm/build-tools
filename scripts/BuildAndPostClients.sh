@@ -92,7 +92,6 @@ if is_flag_on "linux"; then
         cd ../build/source;
         ./makeLinuxBuild "v${CURRENT_VERSION}";
         cp "${TAG_BASE}${CURRENT_VERSION}_Linux.tar.gz" ../../../../output/clientBuilds;
-        fi;
         cd ../../..;
     fi;
 
