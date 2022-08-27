@@ -92,7 +92,7 @@ if is_flag_on "linux"; then
         cd ../build/source;
         ./makeLinuxBuild "v${CURRENT_VERSION}";
         if is_flag_on "unsigned"; then
-            cp "${TAG_BASE}${CURRENT_VERSION}_Linux_Unsigned.tar.gz" ../../../../output/clientBuilds;
+            cp "${TAG_BASE}${CURRENT_VERSION}_Linux.tar.gz" ../../../../output/clientBuilds/"${TAG_BASE}${CURRENT_VERSION}_Linux_Unsigned.tar.gz";
         else
             cp "${TAG_BASE}${CURRENT_VERSION}_Linux.tar.gz" ../../../../output/clientBuilds;
         fi;
