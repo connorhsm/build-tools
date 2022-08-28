@@ -257,16 +257,14 @@ if is_flag_on "windows"; then
     # Build the client bundle.
 
     if is_flag_on "client"; then
+        if is_flag_on "unsigned"; then
+            cp OneLife/gameSource/2HOL.exe ../output/clientBuilds/2HOL_Unsigned.exe;
+        fi;
         cd OneLife/build;
         ./makeDistributionWindows "v${CURRENT_VERSION}";
         cd windows;
-        if is_flag_on "unsigned"; then
-            zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows_Unsigned.zip" "${TAG_BASE}${CURRENT_VERSION}";
-            cp "${TAG_BASE}${CURRENT_VERSION}_Windows_Unsigned.zip" ../../../../output/clientBuilds;
-        else
-            zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" "${TAG_BASE}${CURRENT_VERSION}";
-            cp "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" ../../../../output/clientBuilds;
-        fi;        
+        zip -r "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" "${TAG_BASE}${CURRENT_VERSION}";
+        cp "${TAG_BASE}${CURRENT_VERSION}_Windows.zip" ../../../../output/clientBuilds;
         cd ../../..;
     fi;
 
