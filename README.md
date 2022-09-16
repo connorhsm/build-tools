@@ -16,6 +16,16 @@ This can be done with `./scripts/BuildAndPostClients.sh windows linux client edi
 
 Building from a tag (with update bundles) and all posting of updates is untested and unlikely to work.
 
+### Current first setup
+To setup running the main script in this repo on a fresh system, do the following:
+```
+./scripts/PrepareDependencies.sh
+./scripts/PrepareRepositories.sh
+sudo ln -s /bin/i686-w64-mingw32-g++ /usr/i686-w64-mingw32/bin/g++
+sudo ln -s /bin/i686-w64-mingw32-gcc /usr/i686-w64-mingw32/bin/gcc
+sudo ln -s /bin/i686-w64-mingw32-windres /usr/i686-w64-mingw32/bin/windres
+```
+
 ## Notes
 Usage `./scripts/BuildAndPostClients client linux master`
 
