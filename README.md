@@ -43,3 +43,4 @@ Flags: *Not all are functioning at time of writing*
 - Release
   - `post`: Moves bundles to public downloads (Update release)
   - `unsigned`: Final Windows package name will indicate it has not yet been signed. Used in automated deployment.
+  - `break`: Will not build the diffBundles and previous versions regardless of the use of `tag`
