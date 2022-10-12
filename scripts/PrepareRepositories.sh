@@ -8,7 +8,7 @@ source ./scripts/CommonVariables.sh;
 
 
 
-GITHUB_BASE="https://github.com/twohoursonelife";
+GITHUB_BASE="https://github.com/connorhsm";
 
 if [[ ! -d repos/2HOL-code ]]; then
     git clone "${GITHUB_BASE}/OneLife.git" repos/2HOL-code;
